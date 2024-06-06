@@ -2,6 +2,8 @@
 
 # Função para update
 sudo apt update && apt upgrade -y
+chmod +x install.sh
+chmod +x SubRecon.sh
 
 # Função para instalar o Golang
 function install_golang() {
