@@ -185,7 +185,7 @@ naabu -host "$folder/subdomains.txt" -tp 1000 > "$folder/PortScan.txt"
 
 # Executando httpx para encontrar subdomínios ativos
 echo -e "\e[33mFinding live subdomains...\e[0m"
-httpx -l "$folder/subdomains.txt" -o "$folder/live_subdomains.txt"
+httpx -l "$folder/subdomains.txt" -threads 100 -o "$folder/live_subdomains.txt"
 echo -e "\e[1;31m$(wc -l < "$folder/live_subdomains.txt")\e[0m"
 
 # filter subdomains by keywords
